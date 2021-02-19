@@ -10,17 +10,30 @@ class App extends Component {
     ]
   }
 
+  addComments = () =>{
+    const newComment = {
+      name: 'Maria', 
+      email: 'maria@gmail.com',
+      data: new Date(),
+      message: 'Olá, pessoal!!!'
+    }
+
+    this.setState({comentarios:[...this.state.comentarios, newComment]})
+  
+  }
+  
   render(){
     return (
       <div className="App">
         <h1>Message Project</h1>
 
-        {this.state.comentarios.map(comentario =>(
-           <Comentario name={comentario.name} email={comentario.email} data={comentario.data}>
+        {this.state.comentarios.map((comentario, indice) =>(
+           <Comentario key={indice} name={comentario.name} email={comentario.email} data={comentario.data}>
             {comentario.message}
            </Comentario>
         ))}
-  
+
+        <button onClick={this.addComments}>Adicionar novo comentário</button>
       </div>
     );
   }
