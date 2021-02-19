@@ -52,10 +52,10 @@ class App extends Component {
         ))}
 
 
-        <form method="POST"> 
+        <form method="POST" className="form"> 
           <h2> Novo Comentário </h2>
 
-          <label htmlFor="name"> Nome: </label>
+          <label htmlFor="name"> Nome </label>
           <input 
           type="text" 
           placeholder="Digite seu nome" 
@@ -63,7 +63,7 @@ class App extends Component {
           value= {this.state.newComments.name} 
           onChange={this.handlerCamp} />
 
-          <label htmlFor="email"> Email: </label>
+          <label htmlFor="email"> Email </label>
           <input 
           type="email"
            name="email" 
@@ -72,16 +72,17 @@ class App extends Component {
            value= {this.state.newComments.email}
            onChange={this.handlerCamp}/>
 
-          <label htmlFor="message"> Mensagem: </label>
-          <input
+          <label htmlFor="message"> 
+          Mensagem </label>
+          <textarea
            type="text" 
            placeholder="Digite sua mensagem" 
            name="message" 
            id="message" 
            value= {this.state.newComments.message}
            onChange={this.handlerCamp}/>
-          <br/>
-          <br/>
+
+         
           <button onClick={this.addComments}>
             Enviar
           </button>

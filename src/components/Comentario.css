@@ -1,6 +1,63 @@
 .comentario{
-    background-color: #eee;
+    background-color: #fff;
     margin-bottom: 2rem;
-    border: 1px solid #555;
     padding: 0 0px 10px 10px;
+    border-radius: 0.125rem;
+    box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.5);
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
 }
+
+.comentario > img {
+    max-width: 80px;
+    max-height:80px;
+}
+
+.comentario .content{
+    padding-left: 1.5rem;
+    
+}
+
+.comentario .content h2, .comentario .content h3 {
+    color: #928f8f;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform:uppercase;
+    letter-spacing: .1rem;
+}
+
+.comentario .content h3{
+    color: #0894e6;
+    text-transform:none;
+    font-size: .9rem;
+}
+
+.comentario .content p{
+    font-size: 1.1rem;
+    color: #3f3e3e;
+}
+
+.comentario .content small {
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+    color: #928f8f;
+    font-size: .8rem;
+}
+
+.comentario .content button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    background:none;
+    border: none;
+
+    color: #f33e3e;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
